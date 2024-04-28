@@ -1,0 +1,116 @@
+.container{
+    background-color: rgb(215, 215, 215);
+    width: 1920px;
+    height: 800px;
+    top: 2000px;
+    left: 0px;
+    position: absolute;
+    user-select: none;
+}
+
+.leftbox{
+    width: 500px;
+    height: 600px;
+    left: 200px;
+    position: absolute;
+    top: 200px;
+    font-family: Share Tech Mono, monospace;
+}
+
+.heading{
+    /* left: 27%; */
+    top: 30px;
+    position: absolute;
+    text-align: left;
+}
+
+.content{
+    font-family: Share Tech Mono, monospace;
+    font-size: 20px;
+    top: 100px;
+    position: absolute;
+}
+
+.button{
+    height: 70px;
+    width: 200px;
+    border: none;
+    color: white;
+    font-family: Share Tech Mono, monospace;
+    background-color: black;
+    border-radius: none;
+    text-align: center;
+    font-size: 20px;
+    top: 450px;
+    padding-right: 50px;
+    position: absolute;
+    transition: 0.5s;
+}
+.button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    top: 440px;
+}
+
+.arrow{
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    padding-left: 20px;
+    line-height: 50px;
+}
+
+.frame1{
+    position: absolute;
+    border: 2px solid black;
+    width: 427px;
+    height: 357px;
+    top: 180px;
+    left: 700px;
+    background-color: antiquewhite;
+}
+
+.frame2{
+    position: absolute;
+    border: 2px solid black;
+    width: 427px;
+    height: 357px;
+    top: 180px;
+    left: 1200px;
+
+}
+
+.frame3{
+    position: absolute;
+    border: 2px solid black;
+    width: 427px;
+    height: 357px;
+    top: 100px;
+    left: 600px;
+    background-color: black;
+}
+
+.move1{
+    transform: rotate(180deg);
+    width: 40px;
+}
+
+.move2{
+    width: 40px;
+}
+.frame1 button{
+    width: 60px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    position: relative;
+}
+
+
+.frameimg{
+    position: absolute;
+    height: 357px;
+    width: 427px;
+}
+
+
