@@ -38,25 +38,26 @@ function SecondWindow() {
           </p>
         </div>
         {/*  */}
-        <div
-          className={style.background}
-          onMouseOver={() => {
-            setIsHovered(true);
-            const audioElement = document.getElementById(
-              "yourAudioElementId"
-            ) as HTMLAudioElement | null;
-            Playaudio(audioElement);
-          }}
-          onMouseOut={() => {
-            setIsHovered(false);
-            const audioElement = document.getElementById(
-              "yourAudioElementId"
-            ) as HTMLAudioElement | null;
-            Pauseaudio(audioElement);
-          }}
-        >
+        <div className={style.background}>
           <strong className={style.backtext}>4A GE</strong>
-          <img src={engine} className={style.engine}></img>
+          <img
+            onMouseOver={() => {
+              setIsHovered(true);
+              const audioElement = document.getElementById(
+                "yourAudioElementId"
+              ) as HTMLAudioElement | null;
+              Playaudio(audioElement);
+            }}
+            onMouseOut={() => {
+              setIsHovered(false);
+              const audioElement = document.getElementById(
+                "yourAudioElementId"
+              ) as HTMLAudioElement | null;
+              Pauseaudio(audioElement);
+            }}
+            src={engine}
+            className={style.engine}
+          ></img>
         </div>
         {/*  */}
         <div className={style.lefttext}>

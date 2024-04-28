@@ -5,17 +5,18 @@
 .container{
     /* background-image: url(".\assets\Trueno background.png"); */
     width: 1900px;
+    max-width: 1900px;
+    position: unset;
     height: 1080px;
-    position: absolute;
     margin: none;
     top: 0px;
+    position: absolute;
     left: 0px;
-    right: opx;
+    right: 0px;
     background: linear-gradient(53deg, #18191D 15.32%, #282A2E 45.06%, #282A2E 48.61%, #18191D 84.27%);
     backdrop-filter: blur(2px);
     user-select: none; /* Prevent text selection */
-    overflow-x: hidden;
-    overflow-x: hidden;
+    
     
 }
 
@@ -105,8 +106,9 @@
 
 .navbar{
     width: 300px;
-    position: fixed;
+    position: absolute;
     top: 100px;
+    z-index: 1000;
 }
 
 .backtext{
@@ -115,22 +117,23 @@
     font-size: 70px;
     position: absolute;
     left: 860px;
+    top: 80px;
     margin-top: -50px;
 }
 
 
 .list{
     list-style: none;
-    padding: 50PX;  
+    padding: 70PX;  
     transition: 0.5s;
 }
 
 
 .items{
     text-decoration: none;
-    color: White; 
+    color: white; 
     font-family:Share Tech Mono, monospace;
-    position: absolute;
+    position: fixed;
     font-size: 30px;
     transition: 0.5s;
 }
@@ -238,6 +241,7 @@
 .footer{
     position: absolute;
     top: 900px;
+    left: 300px;
 }
 
 .footlist{

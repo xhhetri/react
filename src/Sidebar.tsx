@@ -6,10 +6,12 @@ import search from "./assets/search.png";
 import dot from "./assets/dot.png";
 import audio from "./assets/toyto.mp3";
 import { useState } from "react";
+import Second from "./SecondWindow";
 
 function Sidebar() {
   const Bar = ["HOME", "ENGINE", "ABOUT", "OUR REVIEW", "CONTACT"];
   const Footer = ["twitter", "facebook", "instagram"];
+
   const Playaudio = (audioElement: HTMLAudioElement | null) => {
     if (audioElement) {
       audioElement.play();
@@ -27,6 +29,44 @@ function Sidebar() {
 
   return (
     <>
+      <nav className={style.navbar}>
+        <ul>
+          {/* {Bar.map((bar) => (
+              <li className={style.list}>
+                <a href="#" className={style.items}>
+                  {bar}
+                </a>
+              </li>
+            ))} */}
+
+          <li className={style.list}>
+            <a href="#" className={style.items}>
+              HOME
+            </a>
+          </li>
+          <li className={style.list}>
+            <a href="#" className={style.items}>
+              ENGINE
+            </a>
+          </li>
+          <li className={style.list}>
+            <a href="#" className={style.items}>
+              ABOUT
+            </a>
+          </li>
+          <li className={style.list}>
+            <a href="#" className={style.items}>
+              OUR REVIEW
+            </a>
+          </li>
+          <li className={style.list}>
+            <a href="#" className={style.items}>
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       <div className={style.container} user-scaable="no">
         <div className={style.search}>
           <p className={style.language}>EN</p>
@@ -35,44 +75,36 @@ function Sidebar() {
         </div>
 
         <h1 className={style.head}>TRUENO</h1>
-        <nav className={style.navbar}>
-          <p className={style.backtext}>
-            <strong>TRUENO</strong>
-          </p>
-          <ul>
-            {Bar.map((bar) => (
-              <li className={style.list}>
-                <a href="#" className={style.items}>
-                  {bar}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <p className={style.backtext}>
+          <strong>TRUENO</strong>
+        </p>
 
-        <div
-          onMouseOver={() => {
-            setIsHovered(true);
-            const audioElement = document.getElementById(
-              "yourAudioElementId"
-            ) as HTMLAudioElement | null;
-            Playaudio(audioElement);
-          }}
-          onMouseOut={() => {
-            setIsHovered(false);
-            const audioElement = document.getElementById(
-              "yourAudioElementId"
-            ) as HTMLAudioElement | null;
-            Pauseaudio(audioElement);
-          }}
-        >
+        <div>
           <audio
             id="yourAudioElementId"
             src={audio}
             className={style.audio}
             autoPlay
           ></audio>
-          <img src={car} alt="car" className={style.car}></img>
+          <img
+            onMouseOver={() => {
+              setIsHovered(true);
+              const audioElement = document.getElementById(
+                "yourAudioElementId"
+              ) as HTMLAudioElement | null;
+              Playaudio(audioElement);
+            }}
+            onMouseOut={() => {
+              setIsHovered(false);
+              const audioElement = document.getElementById(
+                "yourAudioElementId"
+              ) as HTMLAudioElement | null;
+              Pauseaudio(audioElement);
+            }}
+            src={car}
+            alt="car"
+            className={style.car}
+          ></img>
           <img src={shadow} alt="car" className={style.shadow}></img>
         </div>
 
